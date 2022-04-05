@@ -27,6 +27,7 @@ func init() {
 //fungsi CreateStudent()
 func (b *Student) CreateStudent() *Student {
 	db.NewRecord(b)
+	db.Create(&b)
 	return b
 }
 

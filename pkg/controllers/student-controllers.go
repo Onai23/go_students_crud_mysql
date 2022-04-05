@@ -47,7 +47,7 @@ func GetStudentById(w http.ResponseWriter, r *http.Request) {
 //set fungsi CreateStudent()
 func CreateStudent(w http.ResponseWriter, r *http.Request) {
 	//set objek cetakan Student dari package models
-	CreateStudent := models.Student{}
+	CreateStudent := &models.Student{}
 	//memanggil method ParseBody()
 	utils.ParseBody(r, CreateStudent)
 	//memanggil method CreateStudent()
@@ -93,7 +93,7 @@ func UpdateStudent(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Error while parsing")
 	}
 	//memanggil method GetStudentById()
-	studentDetails, db := models.GetStudentById()
+	studentDetails, db := models.GetStudentById(NIM)
 	if updateStudent.Name != "" {
 		studentDetails.Name = updateStudent.Name
 	}

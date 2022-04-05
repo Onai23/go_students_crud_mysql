@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/Onai23/go_students_crud_mysql/pkg/routes"
 	"github.com/gorilla/mux"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"log"
 	"net/http"
 )
@@ -11,8 +12,8 @@ import (
 func main() {
 	// inisialisasi routes
 	r := mux.NewRouter()
-	routes.RegisterStudentRoutes(r)
+	routes.RegisterStudentsRoutes(r)
 	http.Handle("/", r)
-	fmt.Print("Starting Server localhost:9010")
-	log.Fatal(http.ListenAndServe("localhost:9010", r))
+	fmt.Print("Starting Server localhost:8080")
+	log.Fatal(http.ListenAndServe("localhost:8080", r))
 }
