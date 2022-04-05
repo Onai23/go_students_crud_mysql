@@ -1,4 +1,4 @@
-package main
+package models
 
 import (
 	"github.com/Onai23/go_students_crud_mysql/pkg/config"
