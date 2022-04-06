@@ -10,11 +10,16 @@ var db *gorm.DB
 //deklarasi cetakan Student
 type Student struct {
 	gorm.Model
-	NIM      string `gorm:""json:"nim"`
-	Name     string `json:"name"`
-	IPK      string `json:"ipk"`
-	Jurusan  string `json:"jurusan"`
-	Angkatan string `json:"angkatan"`
+	NIM            string `gorm:""json:"nim"`
+	Name           string `json:"name"`
+	IPK            string `json:"ipk"`
+	Jurusan        string `json:"jurusan"`
+	Angkatan       string `json:"angkatan"`
+	Status_aktif   string `json:"status_aktif"`
+	Username       string `json:"username"`
+	Email_akademik string `json:"email_akademik"`
+	Wali_mahasiswa string `json:"wali_mahasiswa"`
+	Jalur_USM      string `json:"jalur_usm"`
 }
 
 //set fungsi init()
