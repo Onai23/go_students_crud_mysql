@@ -15,7 +15,7 @@ type Student struct {
 	IPK            string `json:"ipk"`
 	Jurusan        string `json:"jurusan"`
 	Angkatan       string `json:"angkatan"`
-	Status_aktif   string `json:"status_aktif"`
+	Status_aktif   bool   `json:"status_aktif"`
 	Username       string `json:"username"`
 	Email_akademik string `json:"email_akademik"`
 	Wali_mahasiswa string `json:"wali_mahasiswa"`
